@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pro-Lombard - сеть ломбардов в Астане. Залог золота, техники. Правила, договоры, отчеты.">
+    <meta name="keywords" content="ломбард Астана, залог золота Астана, залог техники Астана, купить золото Астана">
+    <title>Pro-Lombard - Сеть ломбардов в Астане</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Pro-Lombard</h1>
+        <div id="lang-switch">
+            <button onclick="switchLang('ru')">RU</button>
+            <button onclick="switchLang('kz')">KZ</button>
+        </div>
+    </header>
+
+    <section id="info">
+        <h2 data-key="about_title">О нас</h2>
+        <p data-key="about_text">Сеть из 8 филиалов в Астане. Лицензия: [укажите]. Мы принимаем в залог: </p>
+        <ul>
+            <li><i class="fas fa-ring"></i> <span data-key="service_gold">Золотые изделия</span></li>
+            <li><i class="fas fa-mobile-alt"></i> <span data-key="service_phones">Телефоны</span></li>
+            <li><i class="fas fa-laptop"></i> <span data-key="service_laptops">Ноутбуки</span></li>
+        </ul>
+        <p data-key="conditions">Условия: Возраст от 21 года.</p>
+    </section>
+
+    <section id="branches">
+        <h2 data-key="branches_title">Филиалы</h2>
+        <ul id="branches-list">
+            <!-- Заполните в data/ru.json, пример: -->
+            <!-- <li><i class="fas fa-map-marker-alt"></i> Адрес 1: [режим] <a href="https://2gis.kz/astana/search/адрес">2GIS</a></li> -->
+        </ul>
+    </section>
+
+    <section id="calculator">
+        <h2 data-key="calculator_title">Калькулятор займа</h2>
+        <form>
+            <label data-key="proba_label">Проба:</label>
+            <select id="proba">
+                <option value="585">585</option>
+                <option value="750">750</option>
+                <option value="lom">Лом</option>
+            </select>
+            <label data-key="weight_label">Вес (гр):</label>
+            <input type="number" id="weight" placeholder="5">
+            <label data-key="days_label">Дни:</label>
+            <input type="number" id="days" placeholder="10">
+            <button type="button" onclick="calculateLoan()">Рассчитать</button>
+        </form>
+        <p id="result"></p>
+    </section>
+
+    <section id="rules">
+        <h2 data-key="rules_title">Правила и документы</h2>
+        <p data-key="rules_text">Правила выдачи займов, условия.</p>
+        <ul id="documents">
+            <!-- Ссылки на PDF из uploads, заполните в CMS -->
+        </ul>
+    </section>
+
+    <section id="contacts">
+        <h2 data-key="contacts_title">Контакты</h2>
+        <p><i class="fas fa-phone"></i> <span data-key="phone">[Номер телефона]</span></p>
+        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/+7[ваш номер]" data-key="whatsapp">Написать в WhatsApp</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pro-Lombard. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
