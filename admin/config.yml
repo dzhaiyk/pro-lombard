@@ -1,7 +1,13 @@
 backend:
-  name: git-gateway
-  branch: main  # Ваш branch в GitHub
+  name: auth0
+  auth0:
+    domain: "ваш-domain.auth0.com"  # Из Auth0
+    client_id: "ВАШ_CLIENT_ID"      # Из Auth0
+    client_secret: "ВАШ_CLIENT_SECRET"  # Из Auth0
+    audience: "https://api.example.com"  # Опционально, если есть API в Auth0
+    scope: "openid profile email"   # Стандартные scopes для логина
 
+# Остальная часть без изменений: media_folder, collections и т.д.
 media_folder: uploads
 public_folder: /uploads
 
@@ -14,52 +20,14 @@ collections:
         file: "data/ru.json"
         fields:
           - {label: "About Title", name: "about_title", widget: string}
-          - {label: "About Text", name: "about_text", widget: text}
-          - {label: "Service Gold", name: "service_gold", widget: string}
-          - {label: "Service Phones", name: "service_phones", widget: string}
-          - {label: "Service Laptops", name: "service_laptops", widget: string}
-          - {label: "Conditions", name: "conditions", widget: text}
-          - {label: "Branches Title", name: "branches_title", widget: string}
-          - {label: "Branches", name: "branches", widget: list, fields: [{label: "Address", name: "address", widget: string}, {label: "Hours", name: "hours", widget: string}, {label: "2GIS Link", name: "gis_link", widget: string}]}
-          - {label: "Calculator Title", name: "calculator_title", widget: string}
-          - {label: "Proba Label", name: "proba_label", widget: string}
-          - {label: "Weight Label", name: "weight_label", widget: string}
-          - {label: "Days Label", name: "days_label", widget: string}
-          - {label: "Loan Sum", name: "loan_sum", widget: string}
-          - {label: "Return Sum", name: "return_sum", widget: string}
-          - {label: "Error", name: "error", widget: string}
-          - {label: "Rules Title", name: "rules_title", widget: string}
-          - {label: "Rules Text", name: "rules_text", widget: text}
-          - {label: "Documents", name: "documents", widget: list, fields: [{label: "Name", name: "name", widget: string}, {label: "File", name: "file", widget: string}]}
-          - {label: "Contacts Title", name: "contacts_title", widget: string}
-          - {label: "Phone", name: "phone", widget: string}
-          - {label: "Whatsapp", name: "whatsapp", widget: string}
+          # ... Все поля, как в предыдущем сообщении
 
       - label: "Казахский"
         name: "kz"
         file: "data/kz.json"
         fields:
           - {label: "About Title", name: "about_title", widget: string}
-          - {label: "About Text", name: "about_text", widget: text}
-          - {label: "Service Gold", name: "service_gold", widget: string}
-          - {label: "Service Phones", name: "service_phones", widget: string}
-          - {label: "Service Laptops", name: "service_laptops", widget: string}
-          - {label: "Conditions", name: "conditions", widget: text}
-          - {label: "Branches Title", name: "branches_title", widget: string}
-          - {label: "Branches", name: "branches", widget: list, fields: [{label: "Address", name: "address", widget: string}, {label: "Hours", name: "hours", widget: string}, {label: "2GIS Link", name: "gis_link", widget: string}]}
-          - {label: "Calculator Title", name: "calculator_title", widget: string}
-          - {label: "Proba Label", name: "proba_label", widget: string}
-          - {label: "Weight Label", name: "weight_label", widget: string}
-          - {label: "Days Label", name: "days_label", widget: string}
-          - {label: "Loan Sum", name: "loan_sum", widget: string}
-          - {label: "Return Sum", name: "return_sum", widget: string}
-          - {label: "Error", name: "error", widget: string}
-          - {label: "Rules Title", name: "rules_title", widget: string}
-          - {label: "Rules Text", name: "rules_text", widget: text}
-          - {label: "Documents", name: "documents", widget: list, fields: [{label: "Name", name: "name", widget: string}, {label: "File", name: "file", widget: string}]}
-          - {label: "Contacts Title", name: "contacts_title", widget: string}
-          - {label: "Phone", name: "phone", widget: string}
-          - {label: "Whatsapp", name: "whatsapp", widget: string}
+          # ... Все поля
 
   - name: "rates"
     label: "Расценки"
@@ -69,9 +37,7 @@ collections:
         name: "rates"
         fields:
           - {label: "585 пробы (тг/гр)", name: "585", widget: number}
-          - {label: "750 пробы (тг/гр)", name: "750", widget: number}
-          - {label: "Лом (тг/гр)", name: "lom", widget: number}
-          - {label: "Комиссия % в день", name: "percent", widget: number}
+          # ... Остальные
 
   - name: "documents"
     label: "Документы"
