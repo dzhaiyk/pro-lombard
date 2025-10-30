@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: ваше_имя/pro-lombard-site  # Замените на ваше
+  repo: jakedaurenbekov/pro-lombard-site  # Замените на ваше
   branch: main
   auth_type: implicit  # Для Decap
   app_id: ВАШ_GITHUB_CLIENT_ID  # Из GitHub OAuth App
