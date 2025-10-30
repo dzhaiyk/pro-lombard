@@ -1,0 +1,31 @@
+{
+    "about_title": "О нас",
+    "about_text": "Сеть из 8 филиалов в Астане. Лицензия: [укажите]. Мы принимаем в залог:",
+    "service_gold": "Золотые изделия",
+    "service_phones": "Телефоны",
+    "service_laptops": "Ноутбуки",
+    "conditions": "Условия: Возраст от 21 года.",
+    "branches_title": "Филиалы",
+    "branches": [
+        {"address": "Филиал 1, ул. [адрес]", "hours": "Пн-Вс 9:00-18:00", "gis_link": "https://2gis.kz/astana/search/[поиск]"},
+        // Добавьте 7 остальных
+        {"address": "Филиал 8, ул. [адрес]", "hours": "Пн-Вс 9:00-18:00", "gis_link": "https://2gis.kz/astana/search/[поиск]"}
+    ],
+    "calculator_title": "Калькулятор займа",
+    "proba_label": "Проба:",
+    "weight_label": "Вес (гр):",
+    "days_label": "Дни:",
+    "loan_sum": "Сумма займа",
+    "return_sum": "К возврату",
+    "error": "Ошибка ввода.",
+    "rules_title": "Правила и документы",
+    "rules_text": "[Ваш текст правил].",
+    "documents": [
+        {"name": "Правила займов", "file": "rules.pdf"},
+        {"name": "Шаблон договора", "file": "contract.pdf"},
+        {"name": "Финансовый отчет", "file": "report.pdf"}
+    ],
+    "contacts_title": "Контакты",
+    "phone": "[Номер телефона]",
+    "whatsapp": "Написать в WhatsApp"
+}
