@@ -1,0 +1,44 @@
+backend:
+  name: git-gateway
+  branch: main  # Ваш branch в GitHub
+
+media_folder: uploads
+public_folder: /uploads
+
+collections:
+  - name: "texts"
+    label: "Тексты"
+    files:
+      - label: "Русский"
+        name: "ru"
+        file: "data/ru.json"
+        fields:
+          - {label: "About Title", name: "about_title", widget: string}
+          - {label: "About Text", name: "about_text", widget: text}
+          # Добавьте поля для всех ключей из ru.json
+          - {label: "Branches", name: "branches", widget: list, fields: [{label: "Address", name: "address", widget: string}, {label: "Hours", name: "hours", widget: string}, {label: "2GIS Link", name: "gis_link", widget: string}]}
+          - {label: "Documents", name: "documents", widget: list, fields: [{label: "Name", name: "name", widget: string}, {label: "File", name: "file", widget: string}]}
+          # И т.д. для остальных
+
+      - label: "Казахский"
+        name: "kz"
+        file: "data/kz.json"
+        fields: []  # Аналогично ru
+
+  - name: "rates"
+    label: "Расценки"
+    file: "data/rates.json"
+    fields:
+      - {label: "585 пробы (тг/гр)", name: "585", widget: number}
+      - {label: "750 пробы (тг/гр)", name: "750", widget: number}
+      - {label: "Лом (тг/гр)", name: "lom", widget: number}
+      - {label: "Комиссия % в день", name: "percent", widget: number}
+
+  - name: "documents"
+    label: "Документы"
+    folder: "uploads"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Название", name: "title", widget: string}
+      - {label: "Файл", name: "file", widget: file}
